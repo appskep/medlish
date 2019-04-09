@@ -348,7 +348,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Cannot be diagnosed 
                         <br>
                         <br>4. What disease in the USA that only can be treated by vaccine?
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Anemia
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Anaemia
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red"><b>b. Flu</b></span>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. AIDS
                         <br>

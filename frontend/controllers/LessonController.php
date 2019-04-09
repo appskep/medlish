@@ -60,7 +60,7 @@ class LessonController extends Controller
             'question' => 'What disease in the USA that only can be treated by vaccine?',
             'is_true' => 'b',
             'answers' => [
-                'a' => 'a. Anemia',
+                'a' => 'a. Anaemia',
                 'b' => 'b. Flu',
                 'c' => 'c. AIDS',
             ],
