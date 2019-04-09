@@ -234,7 +234,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <big><b>Dentist</b> /ˈdɛntɪst/</big>
                         <br>a person who is qualified to treat diseases and other conditions that affect the teeth and gums.
                         </td>
-                        <td>
+                        <td valign="top">
                             <img src="image/dentist.jpg" height="200px" style="box-shadow:0 0 1px rgba(0,0,0,0.5); border-radius:4px">
                         </td>
                     </tr>
@@ -244,7 +244,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <big><b>Dietician</b> /dʌɪəˈtɪʃ(ə)n/</big>
                         <br>an expert on diet and nutrition.
                         </td>
-                        <td>
+                        <td valign="top">
                             <img src="image/dietician.jpg" height="200px" style="box-shadow:0 0 1px rgba(0,0,0,0.5); border-radius:4px">
                         </td>
                     </tr>
@@ -254,7 +254,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <big><b>Nurse</b>/ nəːs/</big>
                         <br>person who cares for the sick or infirm, specifically
                         </td>
-                        <td>
+                        <td valign="top">
                             <img src="image/nurse.jpg" height="200px" style="box-shadow:0 0 1px rgba(0,0,0,0.5); border-radius:4px">
                         </td>
                     </tr>
@@ -264,7 +264,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <big><b>Orthopaedist</b> /ˌɔːθəˈpiːdɪst/</big>
                         <br>specialist in orthopedics
                         </td>
-                        <td>
+                        <td valign="top">
                             <img src="image/orthopaedist.jpg" height="200px" style="box-shadow:0 0 1px rgba(0,0,0,0.5); border-radius:4px">
                         </td>
                     </tr>
@@ -274,7 +274,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <big><b>Pharmacist</b> /ˈfɑːməsɪst/</big>
                         <br>a person licensed to prepare, compound, and dispense drugs upon written (prescription) from a licensed practitioner such as a physician, dentist, or advanced practice nurse
                         </td>
-                        <td>
+                        <td valign="top">
                             <img src="image/pharmacist.jpg" height="200px" style="box-shadow:0 0 1px rgba(0,0,0,0.5); border-radius:4px">
                         </td>
                     </tr>
@@ -284,7 +284,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <big><b>Physiotherapist</b> /fɪzɪəʊˈθɛrəpɪst/</big>
                         <br>a person who qualified to treat disease, injury, or deformity by physical methods such as massage, heat treatment and exercise.
                         </td>
-                        <td>
+                        <td valign="top">
                             <img src="image/physiotherapist.jpg" height="200px" style="box-shadow:0 0 1px rgba(0,0,0,0.5); border-radius:4px">
                         </td>
                     </tr>
@@ -294,7 +294,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <big><b>Radiologist</b> /reɪdɪˈɒlədʒɪst/</big>
                         <br>a person who use X-rays or other high-energy radiation, especially a doctor specializing in radiology.
                         </td>
-                        <td>
+                        <td valign="top">
                             <img src="image/radiologist.jpg" height="200px" style="box-shadow:0 0 1px rgba(0,0,0,0.5); border-radius:4px">
                         </td>
                     </tr>
@@ -304,7 +304,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <big><b>Surgeon</b> /ˈsəːdʒ(ə)n/</big>
                         <br>a medical specialist who performs surgery
                         </td>
-                        <td>
+                        <td valign="top">
                             <img src="image/surgeon.jpg" height="200px" style="box-shadow:0 0 1px rgba(0,0,0,0.5); border-radius:4px">
                         </td>
                     </tr>
