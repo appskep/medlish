@@ -231,7 +231,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <table class="table-condensed">                    
                     <tr>
                         <td align="right" valign="top">
-                        <big><b>Dentist</b> /ˈdɛntɪst/</big>
+                        <big><b>Dentist</b> <br>/ˈdɛntɪst/</big>
                         <br>a person who is qualified to treat diseases and other conditions that affect the teeth and gums.
                         </td>
                         <td valign="top">
@@ -241,7 +241,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <tr>
                         <td align="right" valign="top">
-                        <big><b>Dietician</b> /dʌɪəˈtɪʃ(ə)n/</big>
+                        <big><b>Dietician</b> <br>/dʌɪəˈtɪʃ(ə)n/</big>
                         <br>an expert on diet and nutrition.
                         </td>
                         <td valign="top">
@@ -251,7 +251,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <tr>
                         <td align="right" valign="top">
-                        <big><b>Nurse</b>/ nəːs/</big>
+                        <big><b>Nurse</b> <br>/nəːs/</big>
                         <br>person who cares for the sick or infirm, specifically
                         </td>
                         <td valign="top">
@@ -261,7 +261,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <tr>
                         <td align="right" valign="top">
-                        <big><b>Orthopaedist</b> /ˌɔːθəˈpiːdɪst/</big>
+                        <big><b>Orthopaedist</b> <br>/ˌɔːθəˈpiːdɪst/</big>
                         <br>specialist in orthopedics
                         </td>
                         <td valign="top">
@@ -271,7 +271,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <tr>
                         <td align="right" valign="top">
-                        <big><b>Pharmacist</b> /ˈfɑːməsɪst/</big>
+                        <big><b>Pharmacist</b> <br>/ˈfɑːməsɪst/</big>
                         <br>a person licensed to prepare, compound, and dispense drugs upon written (prescription) from a licensed practitioner such as a physician, dentist, or advanced practice nurse
                         </td>
                         <td valign="top">
@@ -281,7 +281,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <tr>
                         <td align="right" valign="top">
-                        <big><b>Physiotherapist</b> /fɪzɪəʊˈθɛrəpɪst/</big>
+                        <big><b>Physiotherapist</b> <br>/fɪzɪəʊˈθɛrəpɪst/</big>
                         <br>a person who qualified to treat disease, injury, or deformity by physical methods such as massage, heat treatment and exercise.
                         </td>
                         <td valign="top">
@@ -291,7 +291,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <tr>
                         <td align="right" valign="top">
-                        <big><b>Radiologist</b> /reɪdɪˈɒlədʒɪst/</big>
+                        <big><b>Radiologist</b> <br>/reɪdɪˈɒlədʒɪst/</big>
                         <br>a person who use X-rays or other high-energy radiation, especially a doctor specializing in radiology.
                         </td>
                         <td valign="top">
@@ -301,7 +301,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <tr>
                         <td align="right" valign="top">
-                        <big><b>Surgeon</b> /ˈsəːdʒ(ə)n/</big>
+                        <big><b>Surgeon</b> <br>/ˈsəːdʒ(ə)n/</big>
                         <br>a medical specialist who performs surgery
                         </td>
                         <td valign="top">
