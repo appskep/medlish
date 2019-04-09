@@ -329,7 +329,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php if ($post_flag) { ?>
                         <div class="alert alert-info">
                             <big>Score : <?= $count_true / 5 * 100 ?></big>
-                            <br><small>Benar: <?= $count_true ?>, Salah: <?= 5 - $count_true ?></small>
+                            <br><small>Correct: <?= $count_true ?>, Incorrect: <?= 5 - $count_true ?></small>
                         </div>
 
                         <br>1. What is the main cause of heart disease in the USA?
