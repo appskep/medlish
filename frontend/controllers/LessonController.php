@@ -28,91 +28,51 @@ class LessonController extends Controller
         [
             'id' => 1,
             'question' => 'What is the main cause of heart disease in the USA?',
+            'is_true' => 'c',
             'answers' => [
-                'a' => [
-                    'is_true' => 0,
-                    'answer' => 'Bad stress management'
-                ],
-                'b' => [
-                    'is_true' => 0,
-                    'answer' => 'Sleep deprivation'
-                ],
-                'c' => [
-                    'is_true' => 1,
-                    'answer' => 'Unorganized eating plan'
-                ],
+                'a' => 'a. Bad stress management',
+                'b' => 'b. Sleep deprivation',
+                'c' => 'c. Unorganized eating plan',
             ],
         ],
         [
             'id' => 2,
             'question' => 'The word “combatting” in the text is best replaced by..?',
+            'is_true' => 'a',
             'answers' => [
-                'a' => [
-                    'is_true' => 1,
-                    'answer' => 'Attack'
-                ],
-                'b' => [
-                    'is_true' => 0,
-                    'answer' => 'Keep'
-                ],
-                'c' => [
-                    'is_true' => 0,
-                    'answer' => 'Defend'
-                ],
+                'a' => 'a. Attack',
+                'b' => 'b. Keep',
+                'c' => 'c. Defend',
             ],
         ],
         [
             'id' => 3,
             'question' => 'What does the word “incurable” in the text mean?',
+            'is_true' => 'a',
             'answers' => [
-                'a' => [
-                    'is_true' => 1,
-                    'answer' => 'Cannot be healed'
-                ],
-                'b' => [
-                    'is_true' => 0,
-                    'answer' => 'Cannot be transmitted'
-                ],
-                'c' => [
-                    'is_true' => 0,
-                    'answer' => 'Cannot be diagnosed'
-                ],
+                'a' => 'a. Cannot be healed',
+                'b' => 'b. Cannot be transmitted',
+                'c' => 'c. Cannot be diagnosed',
             ],
         ],
         [
             'id' => 4,
             'question' => 'What disease in the USA that only can be treated by vaccine?',
+            'is_true' => 'b',
             'answers' => [
-                'a' => [
-                    'is_true' => 0,
-                    'answer' => 'Anemia'
-                ],
-                'b' => [
-                    'is_true' => 1,
-                    'answer' => 'Flu'
-                ],
-                'c' => [
-                    'is_true' => 0,
-                    'answer' => 'AIDS'
-                ],
+                'a' => 'a. Anemia',
+                'b' => 'b. Flu',
+                'c' => 'c. AIDS',
             ],
         ],
         [
             'id' => 5,
             'question' => 'Viral disease can also be said as..?',
+            'is_true' => 'a',
             'answers' => [
-                'a' => [
-                    'is_true' => 1,
-                    'answer' => 'Endemic disease'
-                ],
-                'b' => [
-                    'is_true' => 0,
-                    'answer' => 'Curable disease'
-                ],
-                'c' => [
-                    'is_true' => 0,
-                    'answer' => 'Infectious disease'
-                ],
+                'a' => 'a. Endemic disease',
+                'b' => 'b. Curable disease',
+                'c' => 'c. Infectious disease',
             ],
         ],
     ];
@@ -131,10 +91,22 @@ class LessonController extends Controller
     public function actionView($id)
     {
         $key = array_search($id, array_column($this->lessons, 'id'));
+        
+        $post_flag = 0;
+        $count_true = 0;
+        if ($post = Yii::$app->request->post()) {
+            $post_flag = 1;
+            foreach ($this->readingQuestions as $question) {
+                if (isset($post[$question['id']]) && $post[$question['id']] == $question['is_true']) $count_true++;
+            }
+        }
+
         return $this->render('view', [
             'id' => $id,
             'lesson' => $this->lessons[$key],
             'readingQuestions' => $this->readingQuestions,
+            'count_true' => $count_true,
+            'post_flag' => $post_flag,
         ]);
     }
 }

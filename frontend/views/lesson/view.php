@@ -4,6 +4,7 @@
 
 use yii\helpers\Url;
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 
 $this->title = $lesson['name'];
 // $this->params['breadcrumbs'][] = ['label' => 'Lessons', 'url' => ['index']];
@@ -15,15 +16,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <div>
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#listening" aria-controls="home" role="tab" data-toggle="tab">Listening</a></li>
+            <li role="presentation" class="<?= !$post_flag ? 'active' : '' ?>"><a href="#listening" aria-controls="home" role="tab" data-toggle="tab">Listening</a></li>
             <li role="presentation"><a href="#speaking" aria-controls="profile" role="tab" data-toggle="tab">Speaking</a></li>
             <li role="presentation"><a href="#vocabulary" aria-controls="messages" role="tab" data-toggle="tab">Vocabulary</a></li>
-            <li role="presentation"><a href="#reading" aria-controls="settings" role="tab" data-toggle="tab">Reading</a></li>
+            <li role="presentation" class="<?= $post_flag ? 'active' : '' ?>"><a href="#reading" aria-controls="settings" role="tab" data-toggle="tab">Reading</a></li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
 
-            <div style="padding:20px 0" role="tabpanel" class="tab-pane active" id="listening">
+            <div style="padding:20px 0" role="tabpanel" class="tab-pane <?= !$post_flag ? 'active' : '' ?>" id="listening">
                 
             <?php if ($id != 2) { ?>
                     <span class="text-muted"><i>(listening section)</i></span>
@@ -227,7 +228,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <span class="text-muted"><i>(vocabulary section)</i></span>
             </div>
 
-            <div style="padding:20px 0" role="tabpanel" class="tab-pane" id="reading">
+            <div style="padding:20px 0" role="tabpanel" class="tab-pane <?= $post_flag ? 'active' : '' ?>" id="reading">
                 
             <?php if ($id != 2) { ?>
                     <span class="text-muted"><i>(reading section)</i></span>
@@ -240,33 +241,64 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <br>
                     <br>
-                    Please answer the questions below:
-                        <br>
-                        
+                    <?php if ($post_flag) { ?>
+                        <div class="alert alert-info">
+                            <big>Score : <?= $count_true / 5 * 100 ?></big>
+                            <br><small>Benar: <?= $count_true ?>, Salah: <?= 5 - $count_true ?></small>
+                        </div>
+
                         <br>1. What is the main cause of heart disease in the USA?
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Bad stress management
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Sleep deprivation
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Unorganized eating plan
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red"><b>c. Unorganized eating plan</b></span>
                         <br>
                         <br>2. The word “combatting” in the text is best replaced by..?
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Attack
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red"><b>a. Attack</b></span>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Keep
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Defend 
                         <br>
                         <br>3. What does the word “incurable” in the text mean?
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Cannot be healed
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red"><b>a. Cannot be healed</b></span>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Cannot be transmitted
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Cannot be diagnosed 
                         <br>
                         <br>4. What disease in the USA that only can be treated by vaccine?
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Anaemia
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Flu
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Anemia
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red"><b>b. Flu</b></span>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. AIDS
                         <br>
                         <br>5. Viral disease can also be said as..?
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Endemic disease
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red"><b>a. Endemic disease</b></span>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Curable disease
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Infectious diseases
+                        
+                    <?php } else { ?>
+
+                        <b>Please answer the questions below:</b>
+                            <br>
+                            <?php $form = ActiveForm::begin(); ?>
+
+                            <?php foreach ($readingQuestions as $readingQuestion) { ?>
+                                <br><?= $readingQuestion['id'] ?>. <?= $readingQuestion['question'] ?>
+                                <?= Html::radioList(
+                                    $readingQuestion['id'], 
+                                    null, 
+                                    $readingQuestion['answers'], 
+                                    ['class' => 'checkbox']) 
+                                ?>
+                            <?php } ?>
+
+                            <br>
+                            <?= Html::submitButton('Submit', ['class' => 'btn btn-success'])?>
+
+                            <?php ActiveForm::end(); ?>
+
+                            <style>
+                                .checkbox label { display: block;}
+                            </style>
+                        
+                        <?php } ?>
+                        
                 <?php } ?>
 
             </div>
